@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="src/signalr.js"></script>
+
+    <title>Strona</title>
+</head>
+
+<body>
+    <div id="container">
+        <input name="message" id="message"></input>
+        <button id="btnMsgToMslf"> wyslij do siebie</button>
+        <button id="btnObjSendJson"> wyslij obiekt</button>
+        <div id="messages"></div>
+    </div>
+    <br><br><br>
+
+
+    <div>
+        <label for="inputToken">Input token</label>
+        <input type="text" name="token" id="inputToken">
+
+        <button id="buttonConnectWithHub">Connect with hub</button>
+
+        <br>
+        <br><br><br>
+        
+        <label for="inputNewOrder">New order</label>
+        <input type="text" name="newOrder" id="inputNewOrder">
+        <button id="buttonNewOrder">Send new order</button>
+    </div>
+
+    <p id="ordersDisplay">
+        <h1>New orders:</h1>
+    </p>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>

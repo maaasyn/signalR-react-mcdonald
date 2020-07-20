@@ -1,0 +1,21 @@
+version: "3.2"
+
+services:
+  front:
+    build: "./front"
+    container_name: "frontend"
+    depends_on:
+      - backend
+    volumes:
+      - ./front:/app/frontend
+    ports:
+      - 3000:3000
+    stdin_open: true
+
+  backend:
+    build: "./signalR/signalR_api"
+    container_name: "backend"
+    volumes:
+      - ./signalR/signalR_api:/app/backend
+    ports:
+      - 5000:80
